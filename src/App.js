@@ -1,10 +1,12 @@
 import './App.css';
+import Logo from './componentes/Logo'
 
 function App() {
   return (
-    <div>
-      <header>
-
+    <div className='app'>
+      <header className='app-header'>
+       
+       <Logo></Logo>
       </header>
     </div>
   );
