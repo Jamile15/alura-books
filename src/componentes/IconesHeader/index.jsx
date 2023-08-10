@@ -1,0 +1,18 @@
+import './estilo.css';
+import perfil from '../../imagens/perfil.svg'
+import sacola from '../../imagens/sacola.svg' 
+
+const icones = [perfil, sacola]
+
+
+function IconesHeader() {
+    return (
+        <ul className='icones'>
+            {icones.map((iconeLista) => (
+                <li className='icone'><img src={iconeLista}></img></li>
+            ))}
+        </ul>
+    )
+}
+
+export default IconesHeader;

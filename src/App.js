@@ -1,18 +1,19 @@
 import './App.css';
 import Logo from './componentes/Logo'
+import OpcoesHeader from './componentes/OpcoesHeader';
+import IconesHeader from './componentes/IconesHeader';
 
-const textoOpcoes= ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+
 
 function App() {
   return (
     <div className="App">
       <header className='App-header'>
         <Logo></Logo>
-        <ul className='opcoes'>
-         {textoOpcoes.map((textodalista) => (
-          <li className='opcao'><p>{textodalista}</p></li>
-         ) ) }
-        </ul>
+        <OpcoesHeader></OpcoesHeader>
+        <IconesHeader></IconesHeader>
+        
+       
       </header>
     </div>
   );
