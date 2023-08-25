@@ -1,6 +1,6 @@
 import livro from '../../imagens/livro.png'
 
- export const livros = [
+export const livros = [
     {
         nome: 'Liderança em Design',
         id: '1',
@@ -62,4 +62,6 @@ import livro from '../../imagens/livro.png'
 
     },
 ]
+
+
 
