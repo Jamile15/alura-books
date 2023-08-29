@@ -1,7 +1,7 @@
 import Input from "../Input"
 import styled from "styled-components"
-import { useState } from "react"
-import { livros, numeros } from "./dadosPesquisa"
+import { useEffect, useState } from "react"
+import { getLivros } from "../../servicos/livros"
 
 
 const PesquisaContainer = styled.section`
@@ -45,6 +45,19 @@ const Resultado = styled.div`
 
 function Pesquisa() {
     const [livrosPesquisados, setLivrosPesquisados] = useState([])
+    const [livros, setLivros] = useState([])
+
+    //fazendo chamada na api no momento que abre a pagina
+
+    useEffect(() => {
+        fetchLivos()
+    }, [])
+
+
+    async function fetchLivos(){
+        const livrosDaAPI= await getLivros()
+        setLivros(livrosDaAPI)
+        }
 
 
     return (
@@ -55,7 +68,7 @@ function Pesquisa() {
                 placeholder="Escreva sua proxima leitura"
                 onBlur={evento => {
                     const textoDigitado = evento.target.value
-                    const resultadoPesquisa = livros.filter(banana => banana.nome.includes(textoDigitado))
+                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
                     setLivrosPesquisados(resultadoPesquisa)
                 }}
             />
