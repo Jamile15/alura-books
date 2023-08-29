@@ -33,7 +33,7 @@ function UltimosLancamentos() {
             <NovosLivrosContainer>
                 {
                     livrosUL.map(livro => (
-                        <img src={livro.src} />
+                        <img src={livro.src} alt='' />
                     ))
                 }
             </NovosLivrosContainer>
